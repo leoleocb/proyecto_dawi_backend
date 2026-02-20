@@ -1,12 +1,12 @@
-/Users/leoleocb/workspace/Cibertec/ciclo6/proyecto/gestion-medica-entity/src/main/java/com/cibertec/gestionmedica/entity/Alergia.java
-/Users/leoleocb/workspace/Cibertec/ciclo6/proyecto/gestion-medica-entity/src/main/java/com/cibertec/gestionmedica/entity/Cita.java
-/Users/leoleocb/workspace/Cibertec/ciclo6/proyecto/gestion-medica-entity/src/main/java/com/cibertec/gestionmedica/entity/Enfermedad.java
-/Users/leoleocb/workspace/Cibertec/ciclo6/proyecto/gestion-medica-entity/src/main/java/com/cibertec/gestionmedica/entity/EntradaHistorial.java
-/Users/leoleocb/workspace/Cibertec/ciclo6/proyecto/gestion-medica-entity/src/main/java/com/cibertec/gestionmedica/entity/ExpedienteMedico.java
-/Users/leoleocb/workspace/Cibertec/ciclo6/proyecto/gestion-medica-entity/src/main/java/com/cibertec/gestionmedica/entity/Medicamento.java
-/Users/leoleocb/workspace/Cibertec/ciclo6/proyecto/gestion-medica-entity/src/main/java/com/cibertec/gestionmedica/entity/Medico.java
-/Users/leoleocb/workspace/Cibertec/ciclo6/proyecto/gestion-medica-entity/src/main/java/com/cibertec/gestionmedica/entity/Paciente.java
-/Users/leoleocb/workspace/Cibertec/ciclo6/proyecto/gestion-medica-entity/src/main/java/com/cibertec/gestionmedica/entity/Receta.java
-/Users/leoleocb/workspace/Cibertec/ciclo6/proyecto/gestion-medica-entity/src/main/java/com/cibertec/gestionmedica/entity/RecetaItem.java
-/Users/leoleocb/workspace/Cibertec/ciclo6/proyecto/gestion-medica-entity/src/main/java/com/cibertec/gestionmedica/entity/Rol.java
-/Users/leoleocb/workspace/Cibertec/ciclo6/proyecto/gestion-medica-entity/src/main/java/com/cibertec/gestionmedica/entity/Usuario.java
+E:\Cibertec\DAWII Ejercicios\proyecto_dawi_backend\gestion-medica-entity\src\main\java\com\cibertec\gestionmedica\entity\Alergia.java
+E:\Cibertec\DAWII Ejercicios\proyecto_dawi_backend\gestion-medica-entity\src\main\java\com\cibertec\gestionmedica\entity\Cita.java
+E:\Cibertec\DAWII Ejercicios\proyecto_dawi_backend\gestion-medica-entity\src\main\java\com\cibertec\gestionmedica\entity\Enfermedad.java
+E:\Cibertec\DAWII Ejercicios\proyecto_dawi_backend\gestion-medica-entity\src\main\java\com\cibertec\gestionmedica\entity\EntradaHistorial.java
+E:\Cibertec\DAWII Ejercicios\proyecto_dawi_backend\gestion-medica-entity\src\main\java\com\cibertec\gestionmedica\entity\ExpedienteMedico.java
+E:\Cibertec\DAWII Ejercicios\proyecto_dawi_backend\gestion-medica-entity\src\main\java\com\cibertec\gestionmedica\entity\Medicamento.java
+E:\Cibertec\DAWII Ejercicios\proyecto_dawi_backend\gestion-medica-entity\src\main\java\com\cibertec\gestionmedica\entity\Medico.java
+E:\Cibertec\DAWII Ejercicios\proyecto_dawi_backend\gestion-medica-entity\src\main\java\com\cibertec\gestionmedica\entity\Paciente.java
+E:\Cibertec\DAWII Ejercicios\proyecto_dawi_backend\gestion-medica-entity\src\main\java\com\cibertec\gestionmedica\entity\Receta.java
+E:\Cibertec\DAWII Ejercicios\proyecto_dawi_backend\gestion-medica-entity\src\main\java\com\cibertec\gestionmedica\entity\RecetaItem.java
+E:\Cibertec\DAWII Ejercicios\proyecto_dawi_backend\gestion-medica-entity\src\main\java\com\cibertec\gestionmedica\entity\Rol.java
+E:\Cibertec\DAWII Ejercicios\proyecto_dawi_backend\gestion-medica-entity\src\main\java\com\cibertec\gestionmedica\entity\Usuario.java

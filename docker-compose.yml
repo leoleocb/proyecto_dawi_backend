@@ -1,0 +1,78 @@
+services:
+
+  mysql:
+    image: mysql:8
+    container_name: mysql-gestion
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: gestion_medica
+    ports:
+      - "3306:3306"   # Evita conflicto si 3306 ya está ocupado
+    networks:
+      - gestion-net
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-padmin"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  ms-auth:
+    build: ./ms-auth
+    container_name: ms-auth
+    ports:
+      - "8000:8080"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    restart: always
+    networks:
+      - gestion-net
+
+  ms-admin:
+    build: ./ms-admin
+    container_name: ms-admin
+    ports:
+      - "8001:8080"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    restart: always
+    networks:
+      - gestion-net
+
+  ms-clinica:
+    build: ./ms-clinica
+    container_name: ms-clinica
+    ports:
+      - "8002:8080"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    restart: always
+    networks:
+      - gestion-net
+
+  ms-reportes:
+    build: ./ms-reportes
+    container_name: ms-reportes
+    ports:
+      - "8003:8080"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    restart: always
+    networks:
+      - gestion-net
+
+networks:
+  gestion-net:
+    driver: bridge

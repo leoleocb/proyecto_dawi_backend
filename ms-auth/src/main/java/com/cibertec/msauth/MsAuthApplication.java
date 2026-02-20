@@ -15,6 +15,7 @@ import com.cibertec.msauth.repository.UsuarioRepository;
 @SpringBootApplication
 @EntityScan(basePackages = {"com.cibertec.gestionmedica.entity"})
 
+
 @EnableJpaRepositories(basePackages = {"com.cibertec.msauth.repository"})
 public class MsAuthApplication {
 

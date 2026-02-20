@@ -1,1 +1,4 @@
 /.metadata/
+pom.xml
+ms-admin/pom.xml
+gestion-medica-entity/pom.xml
