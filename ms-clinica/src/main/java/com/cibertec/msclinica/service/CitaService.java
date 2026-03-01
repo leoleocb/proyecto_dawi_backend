@@ -2,8 +2,6 @@ package com.cibertec.msclinica.service;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import java.time.LocalDate;
-import java.time.LocalTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,22 +27,7 @@ public class CitaService {
 	private AdminClient adminClient;
 	
 	public CitaDTO registrarCita(CitaDTO dto) {
-			if (dto.getFecha() != null && dto.getHora() != null) {
-	            
-				LocalDate fechaCita = dto.getFecha();
-				LocalTime horaCita = dto.getHora();
-	            
-				LocalDate hoy = LocalDate.now();
-				LocalTime ahora = LocalTime.now();
-	
-				if (fechaCita.isBefore(hoy)) {
-					throw new RuntimeException("No se puede agendar una cita en una fecha pasada");
-				}
-				if (fechaCita.isEqual(hoy) && horaCita.isBefore(ahora)) {
-					throw new RuntimeException("No se puede agendar una cita en una hora que ya pasó");
-				}
-			}
-
+		
 		PacienteDTO paciente = adminClient.obtenerPaciente(dto.getPacienteId());
 		MedicoDTO medico = adminClient.obtenerMedico(dto.getMedicoId());
 		

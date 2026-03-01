@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -52,15 +53,6 @@ public class CitaController {
     public ResponseEntity<CitaDTO> actualizarEstado(@PathVariable Long id){
         try {
             return ResponseEntity.ok(service.cambiarEstado(id, "ATENDIDA"));
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().build();
-        }
-    }
-
-    @PutMapping("/{id}/cancelar")
-    public ResponseEntity<CitaDTO> cancelarCita(@PathVariable Long id){
-        try {
-            return ResponseEntity.ok(service.cambiarEstado(id, "CANCELADA"));
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }

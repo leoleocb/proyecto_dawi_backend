@@ -1,0 +1,76 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  # 1. API GATEWAY
+  - job_name: 'api-gateway'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['host.docker.internal:8080']
+    relabel_configs:
+      - source_labels: [job]
+        target_label: application
+
+  # 2. CONFIG SERVER
+  - job_name: 'config-server'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['host.docker.internal:8888']
+    relabel_configs:
+      - source_labels: [job]
+        target_label: application
+
+  # 3. EUREKA SERVER
+  - job_name: 'eureka-server'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['host.docker.internal:8761']
+    relabel_configs:
+      - source_labels: [job]
+        target_label: application
+
+  # 4. MS-AUTH
+  - job_name: 'ms-auth'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['host.docker.internal:8000']
+    relabel_configs:
+      - source_labels: [job]
+        target_label: application
+
+  # 5. MS-ADMIN
+  - job_name: 'ms-admin'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['host.docker.internal:8001']
+    relabel_configs:
+      - source_labels: [job]
+        target_label: application
+
+  # 6. MS-CLINICA
+  - job_name: 'ms-clinica'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['host.docker.internal:8002']
+    relabel_configs:
+      - source_labels: [job]
+        target_label: application
+
+  # 7. MS-REPORTES
+  - job_name: 'ms-reportes'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['host.docker.internal:8003']
+    relabel_configs:
+      - source_labels: [job]
+        target_label: application
+
+  # 8. MS-HISTORIAL
+  - job_name: 'ms-historial'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['host.docker.internal:8005']
+    relabel_configs:
+      - source_labels: [job]
+        target_label: application
